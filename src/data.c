@@ -407,8 +407,8 @@ int fill_truth_detection(const char *path, int num_boxes, int truth_size, float 
         char buff[256];
         if (id >= classes) {
             printf("\n Wrong annotation: class_id = %d. But class_id should be [from 0 to %d], file: %s \n", id, (classes-1), labelpath);
-            sprintf(buff, "echo %s \"Wrong annotation: class_id = %d. But class_id should be [from 0 to %d]\" >> bad_label.list", labelpath, id, (classes-1));
-            system(buff);
+            //sprintf(buff, "echo %s \"Wrong annotation: class_id = %d. But class_id should be [from 0 to %d]\" >> bad_label.list", labelpath, id, (classes-1));
+            //system(buff);
             if (check_mistakes) getchar();
             ++sub;
             continue;
